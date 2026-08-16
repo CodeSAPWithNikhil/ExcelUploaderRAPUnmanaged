@@ -1,0 +1,18 @@
+unmanaged implementation in class zcl_bp_c_batch_shelf unique;
+strict ( 2 );
+
+define behavior for ZC_BATCH_SHELF //alias <alias_name>
+//late numbering
+lock master
+authorization master ( global )
+//etag master <field_name>
+{
+  // create ( authorization : global );
+  // update;
+  delete;
+  action extendExpiry parameter zc_a_extended_date;
+  static action extendExpiryExcel deep parameter ZC_A_XLSX_FILE;
+  // field ( readonly ) Material, Plant, Batch;
+  side effects { action extendExpiry affects field ( ExtendedDate, Remarks ); }
+
+}
