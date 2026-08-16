@@ -3,6 +3,8 @@ Excel upload using static action
 
 A simple **SAP RAP Unmanaged** application demonstrating two practical RAP action patterns using a custom **Z table**.
 
+<img width="1137" height="632" alt="image" src="https://github.com/user-attachments/assets/d37d6c9a-7f10-44a8-9619-3aa0df847146" />
+
 ## What it demonstrates
 
 * **Static action** to open a dialog, accept remarks and an Excel file, and process the uploaded data.
