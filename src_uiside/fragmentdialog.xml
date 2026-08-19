@@ -1,0 +1,61 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:unified="sap.ui.unified"  core:require="{ handler: 'batchshelf/ext/controller/ControllerExtend'}">
+
+    <Dialog
+        id="extendExpiryDialog"
+        title="Extend Expiry Mass"
+        contentWidth="500px"
+        draggable="true"
+        resizable="true"
+        >
+
+        <content>
+
+            <VBox class="sapUiSmallMargin">
+
+                <Label
+                    text="Remarks"
+                    required="true"/>
+
+                <TextArea
+                    id="txtRemarks"
+                    rows="6"
+                    width="100%"
+                    liveChange="handler.onRemarksChange"/>
+
+                <Label
+                    text="Excel"
+                    class="sapUiSmallMarginTop"/>
+
+                <unified:FileUploader
+                    id="fuExcel"
+                    name="myFileUpload"
+                    width="100%"
+                    placeholder="Browse or drop a file"
+                    change="handler.onFileChange"
+                    sameFilenameAllowed="true"/>
+
+            </VBox>
+
+        </content>
+
+        <beginButton>
+            <Button
+                text="Extend Expiry Mass"
+                type="Emphasized"
+                id="Btn1"
+                press="handler.onExtendExpiryMass"/>
+        </beginButton>
+
+        <endButton>
+            <Button
+                text="Cancel"
+                id="Btn2"
+                press="handler.onCloseExtendExpiryDialog"/>
+        </endButton>
+
+    </Dialog>
+
+</core:FragmentDefinition>
