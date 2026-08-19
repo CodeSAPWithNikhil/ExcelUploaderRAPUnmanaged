@@ -1,0 +1,19 @@
+@EndUserText.label: 'abstract excel'
+define abstract entity ZA_UI_EXCEL_PARAMS
+{
+  @Semantics.largeObject: {
+    mimeType       : 'excel_mimetype',
+    fileName       : 'excel_filename',
+    acceptableMimeTypes: [ 'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'  ],
+    contentDispositionPreference: #INLINE
+  }
+
+  @EndUserText.label:'Excel'
+  excel_attachment : abap.rawstring(0);
+  @Semantics.mimeType: true
+  excel_mimetype   : abap.char(128);
+  @UI.hidden       : true
+  excel_filename   : abap.char(128);
+  
+  remarks: abap.string( 3000 );
+}
