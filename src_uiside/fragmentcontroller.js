@@ -71,7 +71,7 @@ sap.ui.define([
                 const sBase64 = await _readFileAsBase64(oSelectedFile);
                 const oModel = oEvent.getSource().getModel();
 
-                // action is unbound -> bind directly off the model root
+                // action is unbound -> bind directly off the model root (V4 service)
 
                 // 2. Prepare the payload (data object matching your backend Entity properties)
                 var oPayload = {
