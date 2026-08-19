@@ -1,7 +1,7 @@
 <core:FragmentDefinition
     xmlns="sap.m"
     xmlns:core="sap.ui.core"
-    xmlns:unified="sap.ui.unified"  core:require="{ handler: 'batchshelf/ext/controller/ControllerExtend'}">
+    xmlns:unified="sap.ui.unified"  core:require="{ handler: 'batchshelf/ext/controller/fragmentcontroller'}">
 
     <Dialog
         id="extendExpiryDialog"
